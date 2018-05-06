@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
     <div class="marquee-wrap"><vue-marquee content="222222222" class="two"  showtwo="false"></vue-marquee></div>
     <div class="marquee-wrap"><vue-marquee content="111111111" class="two"  showtwo="false"></vue-marquee></div>
     <div class="marquee-wrap"><vue-marquee content="3" class="two"  :showtwo="false" speed="quick" ></vue-marquee></div>
@@ -8,7 +7,6 @@
 </template>
 
 <script>
-// import Hello from './components/Hello'
 import vueMarquee from './Marquee.vue'
 
 export default {

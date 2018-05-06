@@ -47,6 +47,7 @@
 
 <template>
   <div class="marquee-box">
+    <img src="./assets/images/logo-samll.png">
     <div class="marquee-content" ref="out">
       <p :class="run?speed:''">
         <span class="text1" ref="in" >{{content}}</span>
@@ -82,9 +83,7 @@
       content (){
         var _this = this;
         setTimeout(()=>{
-          // let out = document.getElementById(_this.pid.out).clientWidth;
-          // let _in = document.getElementById(_this.pid.in).clientWidth;
-          _this.$nextTick(()=>{
+           _this.$nextTick(()=>{
             let out = _this.$refs.out.clientWidth;
             let _in = _this.$refs.in.clientWidth;
             _this.pWidth = 2*_in;
@@ -94,8 +93,6 @@
       }
     },
     mounted (){
-      // let out = document.getElementById(this.pid.out).clientWidth;
-      // let _in = document.getElementById(this.pid.in).clientWidth;
       var _this = this;
       this.$nextTick(()=>{
         let out = _this.$refs.out.clientWidth;
