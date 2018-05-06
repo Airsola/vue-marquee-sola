@@ -1,33 +1,40 @@
 <template>
   <div id="app">
-    <div class="marquee-wrap"><vue-marquee content="222222222" class="two"  showtwo="false"></vue-marquee></div>
-    <div class="marquee-wrap"><vue-marquee content="111111111" class="two"  showtwo="false"></vue-marquee></div>
-    <div class="marquee-wrap"><vue-marquee content="3" class="two"  :showtwo="false" speed="quick" ></vue-marquee></div>
+    <mt-cloud-header :userName="name" @logout="handlerLogout"></mt-cloud-header>
+    <!--<div style="height: 800px;" ></div>-->
   </div>
 </template>
 
 <script>
-import vueMarquee from './Marquee.vue'
+import MtCloudHeader from './MtCloudHeader.vue'
 
 export default {
   name: 'app',
   components: {
-    vueMarquee
+    MtCloudHeader
+  },
+  data() {
+    return {
+      name: "SolaZhou-7777777777"
+    }
+  },
+  methods: {
+    handlerLogout() {
+      console.log("退出登录")
+    }
   }
 }
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: gray;
+  height: 300px;
 }
-.marquee-wrap {
-  width: 100px;
-  margin: 0 auto;
-}
+
 </style>
